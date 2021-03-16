@@ -14,7 +14,7 @@ Exam webstart_bar
 
 ### 2 parties:
 
-- Site vitrine - Front-office
+Site vitrine - Front-office
 
 ### MVP: Minimum Viable Product
 
