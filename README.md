@@ -1,10 +1,10 @@
-### Webstart Bar
+# Webstart Bar
 
 Exam webstart_bar
 
 ## Phase de conception
 
-## Application site vitrine
+### Application site vitrine
 
 - Users story, use cases, cas d'utilisation
 - Anglais
@@ -12,11 +12,11 @@ Exam webstart_bar
 - Le langage de programmation: PHP, HTML, CSS, JS
 - Framework: From Scratch
 
-## 2 parties:
+### 2 parties:
 
 - Site vitrine - Front-office
 
-## MVP: Minimum Viable Product
+### MVP: Minimum Viable Product
 
 #1 En tant qu'utilisateur, je souhaite pouvoir naviguer dans les différentes pages du site vitrine (Accueil, Cartes, Serveurs)
 #2 En tant qu'utilisateur, je souhaite pouvoir accéder à la liste des cartes disponibles
@@ -27,9 +27,9 @@ Exam webstart_bar
 
 #7 En tant que "VIP", je souhaite accéder à un espace caché afin de gérer le statut de mes cartes
 
-## MCD
+### MCD
 
-# Drink Entity
+#### Drink Entity
 
 Id
 Title
@@ -41,12 +41,12 @@ Created_at
 Updated_at
 Deleted_at
 
-# Drink_has_category
+#### Drink_has_category
 
 Drink_id
 Category_id
 
-# Category Entity
+#### Category Entity
 
 Id
 Title
@@ -56,7 +56,7 @@ Created_at
 Updated_at
 Deleted_at
 
-# Card Entity
+#### Card Entity
 
 Id
 Title
@@ -66,12 +66,12 @@ Created_at
 Updated_at
 Deleted_at
 
-# Card_has_drink
+#### Card_has_drink
 
 Card_id
 Drink_id
 
-# Server Entity
+#### Server Entity
 
 Id
 Lastname
@@ -84,7 +84,7 @@ Created_at
 Updated_at
 Deleted_at
 
-# Drink_has_ingredient
+#### Drink_has_ingredient
 
 Drink_id
 Quantity
@@ -93,7 +93,7 @@ Ingredient
 
 ## Infos
 
-# TVA
+### TVA
 
 - Non alcoolisé et conservable : 5.5%
 - Non alcoolisé et consommation directe : 10%
