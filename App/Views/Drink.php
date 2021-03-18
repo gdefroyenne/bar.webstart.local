@@ -18,7 +18,8 @@
     <?php if($drink['active'] == 1) { ?>
       <img src="img/drinks/<?php echo $drink['title']; ?>.jpg" alt="<?php echo $drink['title']; ?>">
       <p>Description : <?php echo $drink['description']; ?></p>
-      <p>Prix : <?php echo $drink['price']; ?> €</p>
+      <p>Prix HT : <?php echo $drink['price']; ?> €</p>
+      <p>Prix : <?php echo (floatval($drink['price']) * (1 + (floatval($drink['vta']) / 100))); ?> €</p>
       <p>TVA : <?php echo $drink['vta']; ?> %</p>  
     <?php } ?>
   </body>
