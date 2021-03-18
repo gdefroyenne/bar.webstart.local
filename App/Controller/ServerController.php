@@ -36,7 +36,7 @@ class ServerController extends Controller implements ControllerInterface {
 
         $arrayToTemplate = ['title' => "Serveurs de l'établissement", 'servers' => $servers];
 
-        $this->render($arrayToTemplate, 'Toggle');
+        $this->render($arrayToTemplate, 'ToggleServer');
     }
 
     public function toggleById() {

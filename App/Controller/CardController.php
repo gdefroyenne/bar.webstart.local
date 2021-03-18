@@ -31,4 +31,24 @@ class CardController extends Controller implements ControllerInterface {
 
         $this->render($arrayToTemplate, 'Card');
     }
+
+    public function toggle() {
+        $sql = "SELECT * FROM card";
+        $cards = $this->getData($sql);
+
+        $arrayToTemplate = ['title' => "Cartes de l'établissement", 'cards' => $cards];
+
+        $this->render($arrayToTemplate, 'ToggleCard');
+    }
+
+    public function toggleById() {
+        $sqlCard = "SELECT * FROM card WHERE id = " . $_GET['id'];
+        $card = $this->getData($sqlCard);
+
+        $card[0]['active'] == 1 ? $active = 0 : $active = 1;
+
+        $sqlToggle = "UPDATE card SET card.active = " . $active . " WHERE card.id = " . $_GET['id'];
+        $this->getData($sqlToggle);
+        $this->toggle();
+    }
 }

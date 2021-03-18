@@ -9,23 +9,26 @@
   <body>
     <header>
       <h1><?php echo $title; ?></h1>
-      <nav><a href="/?page=home"><h2>Accueil</h2></a></nav>
+      <nav>
+        <a href="/?page=home"><h2>Accueil</h2></a>
+        <a href="/?page=server&action=toggle"><h2>Serveurs</h2></a>
+      </nav>
     </header>
     <div class="wrapper">
-      <?php foreach($servers as $server) { ?>
+      <?php foreach($cards as $card) { ?>
         <div class="item">
-          <img src="img/servers/<?php echo $server['firstname'] . "_" . $server['lastname']; ?>.jpg" alt="<?php echo $server['firstname'] . "_" . $server['lastname']; ?>">
-          <h4><?php echo $server['firstname'] . ' ' . $server['lastname']; ?></h4>
+          <img src="img/cards/<?php echo $card['title']; ?>.jpg" alt="<?php echo $card['title']; ?>">
+          <h4><?php echo $card['title']; ?></h4>
           <p>
-            <?php if($server['active'] == 1) {
+            <?php if($card['active'] == 1) {
               echo 'Actif';
             } else {
               echo 'Inactif'; 
             }?>
           </p>
-          <a class="button" href="/?page=server&action=toggleById&id=<?php echo $server['id']; ?>">
+          <a class="button" href="/?page=card&action=toggleById&id=<?php echo $card['id']; ?>">
             <p>
-              <?php if($server['active'] == 1) {
+              <?php if($card['active'] == 1) {
                 echo 'Désactiver ?';
               } else {
                 echo 'Activer ?'; 

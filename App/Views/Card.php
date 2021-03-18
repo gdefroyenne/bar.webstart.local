@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
-    <link href="styles/card.css" rel="stylesheet">
+    <link href="styles/list.css" rel="stylesheet">
   </head>
 
   <body>
