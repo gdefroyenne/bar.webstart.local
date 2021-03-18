@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
-
-    <script type="text/javascript"></script>
-    <style type="text/css"></style>
+    <link href="styles/card.css" rel="stylesheet">
   </head>
 
   <body>
@@ -18,13 +16,18 @@
       </nav>
     </header>
     <p><?php echo $description; ?></p>
-    <?php foreach($drinks as $drink) { 
-      if($drink['active'] == 1) { ?>
-        <a href="/?page=drink&id=<?php echo $drink['id'] ?>">
-          <h4><?php echo $drink['title']; ?></h4>
-        </a>
-        <p><?php echo $drink['description']; ?></p>
-      <?php }
-    } ?>
+    <div class="wrapper">
+      <?php foreach($drinks as $drink) { 
+        if($drink['active'] == 1) { ?>
+          <div class="item">
+            <img src="img/drinks/<?php echo $drink['title']; ?>.jpg" alt="<?php echo $drink['title']; ?>">
+            <a href="/?page=drink&id=<?php echo $drink['id'] ?>">
+              <h4><?php echo $drink['title']; ?></h4>
+            </a>
+            <p><?php echo $drink['description']; ?></p>
+          </div>
+        <?php }
+      } ?>
+    </div>
   </body>
 </html>

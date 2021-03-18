@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
-
-    <script type="text/javascript"></script>
-    <style type="text/css"></style>
+    <link href="styles/drink.css" rel="stylesheet">
   </head>
 
   <body>
@@ -18,6 +16,7 @@
       </nav>
     </header>
     <?php if($drink['active'] == 1) { ?>
+      <img src="img/drinks/<?php echo $drink['title']; ?>.jpg" alt="<?php echo $drink['title']; ?>">
       <p>Description : <?php echo $drink['description']; ?></p>
       <p>Prix : <?php echo $drink['price']; ?> €</p>
       <p>TVA : <?php echo $drink['vta']; ?> %</p>  

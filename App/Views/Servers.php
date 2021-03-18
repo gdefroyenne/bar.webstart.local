@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
-
-    <script type="text/javascript"></script>
-    <style type="text/css"></style>
+    <link href="styles/servers.css" rel="stylesheet">
   </head>
 
   <body>
@@ -17,13 +15,18 @@
       </nav>
     </header>
     <p><?php echo $introduction; ?></p>
-    <?php foreach($servers as $server) { 
-      if($server['active'] == 1) { ?>
-        <a href="/?page=server&action=showById&id=<?php echo $server['id'] ?>">
-          <h4><?php echo $server['firstname'] . ' ' . $server['lastname']; ?></h4>
-        </a>
-        <p><?php echo $server['description']; ?></p>
-      <?php }
-    } ?>
+    <div class="wrapper">
+      <?php foreach($servers as $server) { 
+        if($server['active'] == 1) { ?>
+        <div class="item">
+          <img src="img/servers/<?php echo $server['firstname'] . "_" . $server['lastname']; ?>.jpg" alt="<?php echo $server['firstname'] . "_" . $server['lastname']; ?>">
+          <a href="/?page=server&action=showById&id=<?php echo $server['id'] ?>">
+            <h4><?php echo $server['firstname'] . ' ' . $server['lastname']; ?></h4>
+          </a>
+          <p><?php echo $server['description']; ?></p>
+        </div>
+        <?php }
+      } ?>
+    </div>
   </body>
 </html>

@@ -39,12 +39,14 @@ class ServerController extends Controller implements ControllerInterface {
         $this->render($arrayToTemplate, 'Toggle');
     }
 
-    public function toggleServer($server) {
-        if($server['active'] == 1) {
-            $sql = "UPDATE server SET active = 0 WHERE id = " . $server['id'];
-        } else {
-            $sql = "UPDATE server SET active = 1 WHERE id = " . $server['id'];
-        }
-        $this->getData($sql);
+    public function toggleById() {
+        $sqlServer = "SELECT * FROM server WHERE id = " . $_GET['id'];
+        $server = $this->getData($sqlServer);
+
+        $server[0]['active'] == 1 ? $active = 0 : $active = 1;
+
+        $sqlToggle = "UPDATE server SET server.active = " . $active . " WHERE server.id = " . $_GET['id'];
+        $this->getData($sqlToggle);
+        $this->toggle();
     }
 }

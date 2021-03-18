@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
-
-    <script type="text/javascript"></script>
-    <style type="text/css"></style>
+    <link href="styles/server.css" rel="stylesheet">
   </head>
 
   <body>
@@ -18,9 +16,10 @@
       </nav>
     </header>
     <?php if($server['active'] == 1) { ?>
+      <img src="img/servers/<?php echo $server['firstname'] . "_" . $server['lastname']; ?>.jpg" alt="<?php echo $server['firstname'] . "_" . $server['lastname']; ?>">
       <p>Age : <?php echo $server['age']; ?> ans</p>
       <p>Description : <?php echo $server['description']; ?></p>
-      <p>Travaille le : <?php echo $server['schedule']; ?></p>  
+      <p>Travaille le : <?php echo strtolower($server['schedule']); ?></p>  
     <?php } ?>
   </body>
 </html>
